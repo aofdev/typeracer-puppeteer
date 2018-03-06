@@ -6,8 +6,6 @@ function delay(timeout) {
   });
 }
 
-
-
 const Play = async (page) => {
   await delay(1000);
   await page.$$eval("a", as => as.find(a => a.innerText.includes("Enter a typing race")).click());
@@ -16,12 +14,10 @@ const Play = async (page) => {
     const tds = Array.from(document.querySelectorAll('table tbody tr td div div span[unselectable]'))
     return tds.map(span => span.textContent)
   });
-
   await delay(12500);
   const textField = await page.$('input[class=txtInput]');
   await textField.type(data.join(""),{ delay: 20 });
   await textField.dispose();
-
 }
 
 async function run() {
