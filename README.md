@@ -1,4 +1,7 @@
 # typeracer-puppeteer
+
+![alt tag](https://i.imgur.com/bTWSYxs.jpg)
+
 ## Installation
 > *Note: Node v7.6.0 or greater*
 
